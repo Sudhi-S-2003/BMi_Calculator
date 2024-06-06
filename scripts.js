@@ -2,6 +2,7 @@ document.getElementById('no-display').style.display='none';
 function cal(){
     let weight=document.getElementById('weight').value;
     let height=document.getElementById('height').value;
+    if(weight!="" && height != ""){
     height_in_m=height/100;
     let bmi=weight/(height_in_m*height_in_m);
     if (bmi < 18.5) {
@@ -19,4 +20,5 @@ function cal(){
     }
   
     document.getElementById('no-display').style.display='block';
+}
 }
